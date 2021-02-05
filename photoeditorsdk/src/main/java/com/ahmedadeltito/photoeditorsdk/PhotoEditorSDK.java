@@ -6,6 +6,7 @@ import android.graphics.Typeface;
 import android.os.Environment;
 import android.support.annotation.ColorInt;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -63,12 +64,13 @@ public class PhotoEditorSDK implements MultiTouchListener.OnMultiTouchListener {
             onPhotoEditorSDKListener.onAddViewListener(ViewType.IMAGE, addedViews.size());
     }
 
-    public void addText(String text, int colorCodeTextView) {
+    public void addText(String text, int colorCodeTextView, int fontSize) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         addTextRootView = inflater.inflate(R.layout.photo_editor_sdk_text_item_list, null);
         TextView addTextView = (TextView) addTextRootView.findViewById(R.id.photo_editor_sdk_text_tv);
         addTextView.setGravity(Gravity.CENTER);
-        addTextView.setText("123");
+        addTextView.setText(text);
+        addTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize);
         if (colorCodeTextView != -1)
             addTextView.setTextColor(colorCodeTextView);
         MultiTouchListener multiTouchListener = new MultiTouchListener(deleteView,
