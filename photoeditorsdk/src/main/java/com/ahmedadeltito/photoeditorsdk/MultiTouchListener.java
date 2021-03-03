@@ -148,7 +148,7 @@ class MultiTouchListener implements OnTouchListener {
                         }
                         if (onPhotoEditorSDKListener != null) {
                             onPhotoEditorSDKListener.onEditTextChangeListener(
-                                    ((TextView) view).getText().toString(), ((TextView) view).getCurrentTextColor());
+                                    ((TextView) view).getText().toString(), ((TextView) view).getCurrentTextColor(), ((int) ((TextView) view).getTextSize()));
                         }
                     }
                 }
