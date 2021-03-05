@@ -65,13 +65,14 @@ public class PhotoEditorSDK implements MultiTouchListener.OnMultiTouchListener {
             onPhotoEditorSDKListener.onAddViewListener(ViewType.IMAGE, addedViews.size());
     }
 
-    public void addText(String text, int colorCodeTextView, int fontSize, int color) {
+    public void addText(String text, int colorCodeTextView, int fontSize, int color, Typeface fontFam) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         addTextRootView = inflater.inflate(R.layout.photo_editor_sdk_text_item_list, null);
         TextView addTextView = (TextView) addTextRootView.findViewById(R.id.photo_editor_sdk_text_tv);
         addTextView.setGravity(Gravity.CENTER);
         addTextView.setText(text);
         addTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize);
+        addTextView.setTypeface(fontFam);
         addTextView.setBackgroundColor(color);
         if (colorCodeTextView != -1)
             addTextView.setTextColor(colorCodeTextView);
