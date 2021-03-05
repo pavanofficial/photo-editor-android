@@ -1,5 +1,6 @@
 package com.ahmedadeltito.photoeditorsdk;
 
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 
 /**
@@ -8,7 +9,7 @@ import android.graphics.drawable.ColorDrawable;
 
 public interface OnPhotoEditorSDKListener {
 
-    void onEditTextChangeListener(String text, int colorCode, int fontSize, int color);
+    void onEditTextChangeListener(String text, int colorCode, int fontSize, int color, Typeface fontFam);
 
     void onAddViewListener(ViewType viewType, int numberOfAddedViews);
 
