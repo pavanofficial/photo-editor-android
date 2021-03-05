@@ -1,12 +1,14 @@
 package com.ahmedadeltito.photoeditorsdk;
 
+import android.graphics.drawable.ColorDrawable;
+
 /**
  * Created by Ahmed Adel on 02/06/2017.
  */
 
 public interface OnPhotoEditorSDKListener {
 
-    void onEditTextChangeListener(String text, int colorCode, int fontSize);
+    void onEditTextChangeListener(String text, int colorCode, int fontSize, int color);
 
     void onAddViewListener(ViewType viewType, int numberOfAddedViews);
 

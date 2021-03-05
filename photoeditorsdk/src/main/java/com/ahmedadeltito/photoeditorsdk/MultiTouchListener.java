@@ -1,6 +1,7 @@
 package com.ahmedadeltito.photoeditorsdk;
 
 import android.graphics.Rect;
+import android.graphics.drawable.ColorDrawable;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
@@ -148,7 +149,7 @@ class MultiTouchListener implements OnTouchListener {
                         }
                         if (onPhotoEditorSDKListener != null) {
                             onPhotoEditorSDKListener.onEditTextChangeListener(
-                                    ((TextView) view).getText().toString(), ((TextView) view).getCurrentTextColor(), ((int) ((TextView) view).getTextSize()));
+                                    ((TextView) view).getText().toString(), ((TextView) view).getCurrentTextColor(), ((int) ((TextView) view).getTextSize()), ((ColorDrawable) view.getBackground()).getColor());
                         }
                     }
                 }
