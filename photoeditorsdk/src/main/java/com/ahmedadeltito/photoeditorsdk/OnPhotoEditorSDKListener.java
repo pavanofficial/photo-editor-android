@@ -1,7 +1,6 @@
 package com.ahmedadeltito.photoeditorsdk;
 
 import android.graphics.Typeface;
-import android.graphics.drawable.ColorDrawable;
 
 /**
  * Created by Ahmed Adel on 02/06/2017.
